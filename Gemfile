@@ -48,3 +48,7 @@ end
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 
 gem 'rails_12factor', group: :production
+
+group :development do
+  gem 'pry-byebug'
+end

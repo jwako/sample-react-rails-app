@@ -1,13 +1,14 @@
 class CommentsController < ApplicationController
   def index
-    @presenter = {
-      :comments => Comment.last(5),
-      :form => {
-        :action => comments_path,
-        :csrf_param => request_forgery_protection_token,
-        :csrf_token => form_authenticity_token
-      }
-    }
+    @comments = Comment.last(5)
+    # @presenter = {
+    #   :comments => Comment.last(5),
+    #   :form => {
+    #     :action => comments_path,
+    #     :csrf_param => request_forgery_protection_token,
+    #     :csrf_token => form_authenticity_token
+    #   }
+    # }
   end
 
   def create
