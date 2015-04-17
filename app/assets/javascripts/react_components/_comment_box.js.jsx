@@ -1,6 +1,6 @@
 var CommentBox = React.createClass({
   getInitialState: function () {
-    return JSON.parse(this.props.presenter);
+    return this.props.presenter;
   },
 
   handleCommentSubmit: function ( formData, action ) {
